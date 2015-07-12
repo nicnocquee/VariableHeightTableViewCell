@@ -8,18 +8,56 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+    
+    var licenses = [AnyObject]()
+    let cellIdentifier = "cellIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        loadLicenses()
+        
+        self.tableView.registerClass(MyCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func loadLicenses () {
+        let licensesPath = NSBundle.mainBundle().pathForResource("Licenses", ofType: "plist")
+        let licensesData = NSFileManager.defaultManager().contentsAtPath(licensesPath!)
+        var error: NSError?
+        let licensesDictionary = NSPropertyListSerialization.propertyListWithData(licensesData!, options: Int(NSPropertyListMutabilityOptions.MutableContainersAndLeaves.rawValue), format: nil, error: &error) as! Dictionary<String, AnyObject>
 
+        licenses = sorted(licensesDictionary.keys).map() {
+            var license = licensesDictionary[$0] as! Dictionary<String, AnyObject>
+            license["name"] = $0
+            return license
+        }
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
 
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return licenses.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MyCell
+        let license = licenses[indexPath.row] as! Dictionary<String, AnyObject>
+        cell.myTitleLabel.text = license["name"] as? String
+        cell.myDescriptionLabel.text = license["Description"] as? String
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
+        return cell
+    }
 }
 

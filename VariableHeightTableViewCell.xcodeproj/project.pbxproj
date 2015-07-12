@@ -13,6 +13,8 @@
 		0338B40D1B5248FD007B4C1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0338B40C1B5248FD007B4C1B /* Images.xcassets */; };
 		0338B4101B5248FD007B4C1B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0338B40E1B5248FD007B4C1B /* LaunchScreen.xib */; };
 		0338B41C1B5248FD007B4C1B /* VariableHeightTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338B41B1B5248FD007B4C1B /* VariableHeightTableViewCellTests.swift */; };
+		0338B4261B524A13007B4C1B /* Licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0338B4251B524A13007B4C1B /* Licenses.plist */; };
+		0338B4281B5251D5007B4C1B /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338B4271B5251D5007B4C1B /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0338B4151B5248FD007B4C1B /* VariableHeightTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariableHeightTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0338B41A1B5248FD007B4C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0338B41B1B5248FD007B4C1B /* VariableHeightTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableHeightTableViewCellTests.swift; sourceTree = "<group>"; };
+		0338B4251B524A13007B4C1B /* Licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Licenses.plist; sourceTree = "<group>"; };
+		0338B4271B5251D5007B4C1B /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,14 @@
 		0338B4021B5248FD007B4C1B /* VariableHeightTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				0338B4251B524A13007B4C1B /* Licenses.plist */,
 				0338B4051B5248FD007B4C1B /* AppDelegate.swift */,
 				0338B4071B5248FD007B4C1B /* ViewController.swift */,
 				0338B4091B5248FD007B4C1B /* Main.storyboard */,
 				0338B40C1B5248FD007B4C1B /* Images.xcassets */,
 				0338B40E1B5248FD007B4C1B /* LaunchScreen.xib */,
 				0338B4031B5248FD007B4C1B /* Supporting Files */,
+				0338B4271B5251D5007B4C1B /* MyCell.swift */,
 			);
 			path = VariableHeightTableViewCell;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			files = (
 				0338B40B1B5248FD007B4C1B /* Main.storyboard in Resources */,
 				0338B4101B5248FD007B4C1B /* LaunchScreen.xib in Resources */,
+				0338B4261B524A13007B4C1B /* Licenses.plist in Resources */,
 				0338B40D1B5248FD007B4C1B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0338B4281B5251D5007B4C1B /* MyCell.swift in Sources */,
 				0338B4081B5248FD007B4C1B /* ViewController.swift in Sources */,
 				0338B4061B5248FD007B4C1B /* AppDelegate.swift in Sources */,
 			);
