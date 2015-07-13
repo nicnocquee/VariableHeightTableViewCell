@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,26 +13,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9V-yT-UQc">
-                        <rect key="frame" x="18" y="18" width="251" height="20.5"/>
+                        <rect key="frame" x="10" y="10" width="267" height="20.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsS-ks-TdH">
-                        <rect key="frame" x="18" y="43" width="251" height="20.5"/>
+                        <rect key="frame" x="10" y="35" width="267" height="36.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="b9V-yT-UQc" firstAttribute="leading" secondItem="6eb-15-WyI" secondAttribute="leadingMargin" constant="10" id="8a7-jx-utY"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="MsS-ks-TdH" secondAttribute="trailing" constant="10" id="UHV-PU-e95"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="b9V-yT-UQc" secondAttribute="trailing" constant="10" id="cMH-Wb-3kk"/>
+                    <constraint firstItem="b9V-yT-UQc" firstAttribute="leading" secondItem="6eb-15-WyI" secondAttribute="leading" constant="10" id="8a7-jx-utY"/>
+                    <constraint firstAttribute="trailing" secondItem="MsS-ks-TdH" secondAttribute="trailing" constant="10" id="UHV-PU-e95"/>
+                    <constraint firstAttribute="trailing" secondItem="b9V-yT-UQc" secondAttribute="trailing" constant="10" id="cMH-Wb-3kk"/>
                     <constraint firstItem="MsS-ks-TdH" firstAttribute="top" secondItem="b9V-yT-UQc" secondAttribute="bottom" constant="5" id="cey-Di-TLW"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="MsS-ks-TdH" secondAttribute="bottom" constant="10" id="exN-Ai-PDZ"/>
-                    <constraint firstItem="b9V-yT-UQc" firstAttribute="top" secondItem="6eb-15-WyI" secondAttribute="topMargin" constant="10" id="qfc-Az-ces"/>
-                    <constraint firstItem="MsS-ks-TdH" firstAttribute="leading" secondItem="6eb-15-WyI" secondAttribute="leadingMargin" constant="10" id="t23-CO-Uz6"/>
+                    <constraint firstAttribute="bottom" secondItem="MsS-ks-TdH" secondAttribute="bottom" constant="10" id="exN-Ai-PDZ"/>
+                    <constraint firstItem="b9V-yT-UQc" firstAttribute="top" secondItem="6eb-15-WyI" secondAttribute="top" constant="10" id="qfc-Az-ces"/>
+                    <constraint firstItem="MsS-ks-TdH" firstAttribute="leading" secondItem="6eb-15-WyI" secondAttribute="leading" constant="10" id="t23-CO-Uz6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
