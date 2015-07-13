@@ -421,6 +421,7 @@
 				0338B4211B5248FD007B4C1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0338B4221B5248FD007B4C1B /* Build configuration list for PBXNativeTarget "VariableHeightTableViewCellTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +430,7 @@
 				0338B4241B5248FD007B4C1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

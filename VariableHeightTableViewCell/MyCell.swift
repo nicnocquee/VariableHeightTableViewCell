@@ -9,8 +9,7 @@
 import UIKit
 
 class MyCell: UITableViewCell {
-//    let myTitleLabel = UILabel()
-//    let myDescriptionLabel = UILabel()
+
     @IBOutlet weak var myTitleLabel: UILabel!
     @IBOutlet weak var myDescriptionLabel: UILabel!
     
@@ -24,15 +23,20 @@ class MyCell: UITableViewCell {
     }
     
     func setupSubviews () {
+        // we need to set the cell's width so that content view's width will be set correctly
+        self.frame.size.width = UIScreen.mainScreen().applicationFrame.size.width
+        
         self.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         if myTitleLabel == nil {
             let label = UILabel()
+            label.backgroundColor = UIColor.blueColor()
             self.contentView.addSubview(label)
             myTitleLabel = label
         }
         if myDescriptionLabel == nil {
             let label = UILabel()
+            label.backgroundColor = UIColor.orangeColor()
             self.contentView.addSubview(label)
             myDescriptionLabel = label
         }
@@ -52,5 +56,10 @@ class MyCell: UITableViewCell {
         let horizontalConstraints2 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[description]-10-|", options: nil, metrics: nil, views: viewBindingsDict as [NSObject : AnyObject]) as [AnyObject]
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-10-[label]-5-[description]-10-|", options: nil, metrics: nil, views: viewBindingsDict as [NSObject : AnyObject]) as [AnyObject]
         self.contentView.addConstraints(horizontalConstraints + horizontalConstraints2 + verticalConstraints)
+        
+        // in order for the table view and auto layout to calculate cell' height properly, we need to set preferredMaxLayoutWidth here
+        self.layoutIfNeeded()
+        myTitleLabel.preferredMaxLayoutWidth = myTitleLabel.frame.size.width
+        myDescriptionLabel.preferredMaxLayoutWidth = myDescriptionLabel.frame.size.width
     }
 }

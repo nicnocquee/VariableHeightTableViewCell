@@ -19,8 +19,8 @@ class ViewController: UITableViewController {
         loadLicenses()
         
         // Uncomment one of these two lines to choose between nib or class to register MyCell
-        //self.tableView.registerClass(MyCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
-        self.tableView.registerNib(UINib(nibName: "MyCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.registerClass(MyCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+        //self.tableView.registerNib(UINib(nibName: "MyCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: cellIdentifier)
         
         self.tableView.estimatedRowHeight = 60
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -53,7 +53,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MyCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MyCell
         let license = licenses[indexPath.row] as! Dictionary<String, AnyObject>
         cell.myTitleLabel.text = license["name"] as? String
         cell.myDescriptionLabel.text = license["Description"] as? String
