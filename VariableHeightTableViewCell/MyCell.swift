@@ -22,6 +22,12 @@ class MyCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // we need to set the cell's width so that content view's width will be set correctly
+        self.frame.size.width = UIScreen.mainScreen().applicationFrame.size.width
+    }
+    
     func setupSubviews () {
         // we need to set the cell's width so that content view's width will be set correctly
         self.frame.size.width = UIScreen.mainScreen().applicationFrame.size.width
@@ -56,10 +62,5 @@ class MyCell: UITableViewCell {
         let horizontalConstraints2 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[description]-10-|", options: nil, metrics: nil, views: viewBindingsDict as [NSObject : AnyObject]) as [AnyObject]
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-10-[label]-5-[description]-10-|", options: nil, metrics: nil, views: viewBindingsDict as [NSObject : AnyObject]) as [AnyObject]
         self.contentView.addConstraints(horizontalConstraints + horizontalConstraints2 + verticalConstraints)
-        
-        // in order for the table view and auto layout to calculate cell' height properly, we need to set preferredMaxLayoutWidth here
-        self.layoutIfNeeded()
-        myTitleLabel.preferredMaxLayoutWidth = myTitleLabel.frame.size.width
-        myDescriptionLabel.preferredMaxLayoutWidth = myDescriptionLabel.frame.size.width
     }
 }
