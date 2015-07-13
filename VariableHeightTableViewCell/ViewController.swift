@@ -18,7 +18,10 @@ class ViewController: UITableViewController {
         
         loadLicenses()
         
-        self.tableView.registerClass(MyCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+        // Uncomment one of these two lines to choose between nib or class to register MyCell
+        //self.tableView.registerClass(MyCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.registerNib(UINib(nibName: "MyCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: cellIdentifier)
+        
         self.tableView.estimatedRowHeight = 60
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }

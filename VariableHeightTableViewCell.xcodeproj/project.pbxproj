@@ -15,6 +15,7 @@
 		0338B41C1B5248FD007B4C1B /* VariableHeightTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338B41B1B5248FD007B4C1B /* VariableHeightTableViewCellTests.swift */; };
 		0338B4261B524A13007B4C1B /* Licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0338B4251B524A13007B4C1B /* Licenses.plist */; };
 		0338B4281B5251D5007B4C1B /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338B4271B5251D5007B4C1B /* MyCell.swift */; };
+		0338B42A1B536AA4007B4C1B /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0338B4291B536AA4007B4C1B /* MyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		0338B41B1B5248FD007B4C1B /* VariableHeightTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableHeightTableViewCellTests.swift; sourceTree = "<group>"; };
 		0338B4251B524A13007B4C1B /* Licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Licenses.plist; sourceTree = "<group>"; };
 		0338B4271B5251D5007B4C1B /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		0338B4291B536AA4007B4C1B /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				0338B40E1B5248FD007B4C1B /* LaunchScreen.xib */,
 				0338B4031B5248FD007B4C1B /* Supporting Files */,
 				0338B4271B5251D5007B4C1B /* MyCell.swift */,
+				0338B4291B536AA4007B4C1B /* MyCell.xib */,
 			);
 			path = VariableHeightTableViewCell;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				0338B4101B5248FD007B4C1B /* LaunchScreen.xib in Resources */,
 				0338B4261B524A13007B4C1B /* Licenses.plist in Resources */,
 				0338B40D1B5248FD007B4C1B /* Images.xcassets in Resources */,
+				0338B42A1B536AA4007B4C1B /* MyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

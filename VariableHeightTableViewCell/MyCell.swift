@@ -9,8 +9,10 @@
 import UIKit
 
 class MyCell: UITableViewCell {
-    let myTitleLabel = UILabel()
-    let myDescriptionLabel = UILabel()
+//    let myTitleLabel = UILabel()
+//    let myDescriptionLabel = UILabel()
+    @IBOutlet weak var myTitleLabel: UILabel!
+    @IBOutlet weak var myDescriptionLabel: UILabel!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,15 +26,19 @@ class MyCell: UITableViewCell {
     func setupSubviews () {
         self.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
+        if myTitleLabel == nil {
+            let label = UILabel()
+            self.contentView.addSubview(label)
+            myTitleLabel = label
+        }
+        if myDescriptionLabel == nil {
+            let label = UILabel()
+            self.contentView.addSubview(label)
+            myDescriptionLabel = label
+        }
+        
         myTitleLabel.font = UIFont.boldSystemFontOfSize(17)
         myDescriptionLabel.font = UIFont.systemFontOfSize(14)
-        
-        if myTitleLabel.superview == nil {
-            self.contentView.addSubview(myTitleLabel)
-        }
-        if myDescriptionLabel.superview == nil {
-            self.contentView.addSubview(myDescriptionLabel)
-        }
         myTitleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
         myTitleLabel.numberOfLines = 0
         myDescriptionLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
