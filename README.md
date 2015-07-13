@@ -6,7 +6,7 @@ Test project to show variable cell height in UITableView. But there is a weird b
 
 ## HOW TO FIX
 
-Apparently the real source of the problem is cell's frame's width is not correctly set until it's displayed on the screen, i.e., `MyCell` is always initiated with 320 points frame's width. Since the table view calculate the height of the rows before the cells are displayed, this causes problem when the app is run in iPhone 6 or 6 plus where the width is not 320 points. So I added the following code at the beginning of `setupSubviews` function.
+Apparently the real source of the problem is cell's frame's width is not correctly set until it's displayed on the screen, i.e., `MyCell` is always initiated with 320 points frame's width. Since the table view calculate the height of the rows before the cells are displayed, this causes problem when the app is run in iPhone 6 or 6 plus where the width is not 320 points. So I added the following code at the beginning of `setupSubviews` function in `MyCell` class.
 
 ```swift
 self.frame.size.width = UIScreen.mainScreen().applicationFrame.size.width
